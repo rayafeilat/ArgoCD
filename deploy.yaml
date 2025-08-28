@@ -13,10 +13,11 @@ spec:
     metadata:
       labels:
         app: test
-    spec:
-      containers:
+    spec:                      # ← this spec is under template
+      containers:              # ← must be nested here
         - name: nginx
           image: nginx:latest
           ports:
             - containerPort: 80
+
 
